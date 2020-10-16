@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>In Class - Week 8</title>
+		<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+		<style>
+			/*
+			.square {
+				height: 200px;
+				width: 200px;
+				background-color: goldenrod;
+			}
+			*/
+			
+		</style>
+	</head>
+	<body>
+		
+		<!--APIs? animation -->
+		<!-- <div class="square"></div> -->
+		
+		<i class="nes-icon is-large heart"></i>
+		
+		<script src="TinyAnimate-0.3.0/TinyAnimate-0.3.0/src/TinyAnimate.js"></script>
+		<script>
+			// copied from https://github.com/branneman/TinyAnimate/blob/master/readme.md
+			var heart = document.querySelector('.heart');
+			heart.addEventListener('mouseover', animateElement);
+			
+			function animateElement() {
+				var randomPercent = Math.floor(Math.random() * 100);
+			
+				TinyAnimate.animateCSS(heart, 'marginLeft', 'px', '%', 0, randomPercent, 2500, 'easeInOutQuart', function() {
+					console.log('done!!!111oneone');
+				});
+				
+			}
+			
+			// https://nostalgic-css.github.io/NES.css/
+		</script>
+		
+	</body>
+</html>
