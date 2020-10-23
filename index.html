@@ -15,27 +15,50 @@
 		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 		
 		<style>
-		  .bd-placeholder-img {
-			font-size: 1.125rem;
-			text-anchor: middle;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-		  }
-
-		  @media (min-width: 768px) {
-			.bd-placeholder-img-lg {
-			  font-size: 3.5rem;
+			.bd-placeholder-img {
+				font-size: 1.125rem;
+				text-anchor: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
 			}
-		  }
+
+			@media (min-width: 768px) {
+				.bd-placeholder-img-lg {
+					font-size: 3.5rem;
+				}
+			}
+			
+			
+			.sticker {
+				width: 180px;
+				height: 180px;
+			}
+
+
+			.example-1 .sticker-img {
+				background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5851522.jpg");
+			}
+
+
+			.example-2 .sticker-img {
+				background-color: blue;
+				
+			}
+
+			change shadow opacity
+				.example-2 .sticker-shadow {
+				opacity: 0.6;
+			}		  
+		  
 		</style>
-    <!-- Custom styles for this template -->
-    <link href="grid.css" rel="stylesheet">
-	<link href="navbar-top-fixed.css" rel="stylesheet">
-	<link href="jumbotron.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+		<!-- Custom styles for this template -->
+		<link href="grid.css" rel="stylesheet">
+		<link href="navbar-top-fixed.css" rel="stylesheet">
+		<link href="jumbotron.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	
 	</head>
 	<body>
@@ -89,10 +112,17 @@
 			  </div>
 	
 		<!-- *** Javascript Library *** -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js">
+
 		
 
-			
+		<div class="sticker example-2"></div>
+		
+		<script type="text/javascript" src="sticker.min.js"></script>
+		
+		<script>
+			Sticker.init('.sticker');
+		</script>
+		
 		<script>
 		//*** 1. API ***
 			fetch("http://numbersapi.com/random/year?json").then(function(networkRequest) {
